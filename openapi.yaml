@@ -1,0 +1,39 @@
+openapi: 3.0.1
+info:
+  title: 插件名称
+  description: 插件描述，需要在何时使用这个插件
+  version: 'v1'
+servers:
+  - url: <http://www.example.com>
+paths:
+  /run:
+    post:
+      operationId: exampleOperation
+      summary: 接口描述
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/exampleRequest'
+      responses:
+        "200":
+          description: OK
+          content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/exampleResponse'
+        "503": 
+          description: "one or more services are unavailable"
+components:
+  schemas:
+    exampleRequest:
+      type: object
+      required:
+      - example_param
+      properties:
+        example_param:
+          type: string
+          required: true
+    exampleResponse:
+      type: string

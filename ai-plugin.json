@@ -1,0 +1,16 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "长文本理解工具",
+    "name_for_model": "LongtextSummary",
+    "description": "基于PDF/Doc格式文档（不支持扫描件），可检索知识点、对文档进行摘要等，支持10MB以内文件",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "https://example.com/openapi.yaml"
+    },
+    "logo_url": "https://example.com/example-icon.png",
+    "contact_email": "example@baidu.com",
+    "legal_info_url": "https://example.com/legal"
+}
